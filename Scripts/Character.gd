@@ -16,3 +16,7 @@ func _process(delta):
 		displacment.y += Input.get_action_strength("speed_down")*50
 	
 	move_and_slide(displacment)
+
+
+func _on_Area2D_area_entered(area):
+	print("hit!")
