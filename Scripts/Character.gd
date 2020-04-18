@@ -1,6 +1,8 @@
 extends KinematicBody2D
 
 var speed = 3
+var direction = 1
+var return_possible = true
 
 func _process(delta):
 	var displacment = Vector2(3, -1.5)
@@ -15,6 +17,11 @@ func _process(delta):
 		displacment.x -= Input.get_action_strength("speed_down")*100
 		displacment.y += Input.get_action_strength("speed_down")*50
 	
+	if Input.is_action_just_pressed("ui_accept") and return_possible:
+		direction = -direction
+		return_possible = false
+	
+	displacment *= direction
 	move_and_slide(displacment)
 
 
