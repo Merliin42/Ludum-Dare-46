@@ -7,7 +7,7 @@ func _ready():
 	randomize()
 
 func _on_Character_pennywise(childs):
-	$Pennywise.hungry += 10*childs
+	hungry += 10*childs
 
 func _on_PennywiseHunger_timeout():
 	hungry -= 1
