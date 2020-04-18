@@ -18,5 +18,9 @@ func _process(delta):
 	move_and_slide(displacment)
 
 
-func _on_Area2D_area_entered(area):
+func _on_TrapsDetector_area_entered(area):
 	print("hit!")
+
+
+func _on_ChildDetector_area_entered(area):
+	print("Give me the child")
