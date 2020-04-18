@@ -19,5 +19,4 @@ func _process(delta):
 
 
 func _on_Area2D_area_entered(area):
-	if area.identification == "trap" :
-		print("Hit!")
+	print("hit!")
