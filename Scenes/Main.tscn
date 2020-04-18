@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/Pennywise.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/TileMap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/CarSpawner.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/Main.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=6]
+
+[node name="Node2D" type="Node"]
+script = ExtResource( 5 )
+
+[node name="TileMap" parent="." instance=ExtResource( 3 )]
+
+[node name="Character" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1226.75, 2319.15 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="CarSpawner" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3548.71, -883.631 )
+
+[node name="CarSpawner2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 7800.03, -2717.9 )
+
+[node name="CarSpawner3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 13178.7, -5583.96 )
+
+[node name="Pennywise" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1002.07, 2461.52 )
+scale = Vector2( 1, 1 )
+
+[node name="PennywiseHunger" type="Timer" parent="."]
+autostart = true
+
+[node name="GUI" parent="." instance=ExtResource( 6 )]
+[connection signal="pennywise" from="Character" to="." method="_on_Character_pennywise"]
+[connection signal="timeout" from="PennywiseHunger" to="." method="_on_PennywiseHunger_timeout"]
