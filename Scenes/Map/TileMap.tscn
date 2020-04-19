@@ -13,5 +13,5 @@ tile_data = PoolIntArray( -16580568, 1073741829, 0, -16580567, 1073741830, 0, -1
 z_index = 1
 mode = 1
 tile_set = ExtResource( 1 )
-cell_size = Vector2( 120, 64 )
+cell_size = Vector2( 128, 64 )
 format = 1
