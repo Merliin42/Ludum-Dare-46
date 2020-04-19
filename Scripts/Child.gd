@@ -1,4 +1,4 @@
-extends Sprite
+extends Node2D
 
 var direction = Vector2(-100, 50)
 
@@ -7,7 +7,7 @@ func _process(delta):
 	position.y += direction.y*delta
 
 func dead():
-	self.texture = null
+	$AnimatedSprite.visible = false
 	$Blood.emitting = true
 	$Timer.start()
 
