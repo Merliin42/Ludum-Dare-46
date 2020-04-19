@@ -1,15 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Traps/Trap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Traps/car_front.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Car.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Sounds/car.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 100.21, 32.6426 )
 
 [node name="Car" instance=ExtResource( 1 )]
 collision_layer = 18
-collision_mask = 18
+collision_mask = 36
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" parent="." index="0"]
@@ -23,4 +24,8 @@ texture = ExtResource( 2 )
 wait_time = 20.0
 one_shot = true
 autostart = true
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="." index="3"]
+stream = ExtResource( 4 )
+[connection signal="area_entered" from="." to="." method="_on_Car_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
