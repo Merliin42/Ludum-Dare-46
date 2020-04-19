@@ -1,0 +1,140 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Font/GOODBYE.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Menus/start_screen.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Menus/Instructions.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=4]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="InputEventAction" id=2]
+action = "ui_cancel"
+
+[sub_resource type="ShortCut" id=3]
+shortcut = SubResource( 2 )
+
+[node name="Instructions" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+custom_constants/separation = 20
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_top = 122.0
+margin_right = 1920.0
+margin_bottom = 209.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "YOU HAVE TO FEED YOUR FRIEND WITH CHILDS"
+align = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_top = 229.0
+margin_right = 1920.0
+margin_bottom = 316.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "BE CAREFULL OF TRAPS"
+align = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_top = 336.0
+margin_right = 1920.0
+margin_bottom = 423.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "THEY MAKE THE CHILD YOU CATCH ESCAPE"
+align = 1
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_top = 443.0
+margin_right = 1920.0
+margin_bottom = 530.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "YOU CAN GO BACK TO FEED YOUR FRIEND"
+align = 1
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_top = 550.0
+margin_right = 1920.0
+margin_bottom = 637.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "BUT WHEN YOU DECIDE TO"
+align = 1
+
+[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_top = 657.0
+margin_right = 1920.0
+margin_bottom = 744.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "THERES NO RETURN UNTIL YOU REACH HIM"
+align = 1
+
+[node name="Label7" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_top = 764.0
+margin_right = 1920.0
+margin_bottom = 851.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.682353, 0.105882, 0.0392157, 1 )
+text = "WASD TO MOVE"
+align = 1
+
+[node name="Label8" type="Label" parent="MarginContainer/VBoxContainer"]
+margin_top = 871.0
+margin_right = 1920.0
+margin_bottom = 958.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.682353, 0.105882, 0.0392157, 1 )
+text = "SPACE TO HEAD BACK"
+align = 1
+
+[node name="Button" type="Button" parent="."]
+margin_right = 107.0
+margin_bottom = 58.0
+focus_mode = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.682353, 0.105882, 0.0392157, 1 )
+enabled_focus_mode = 0
+shortcut = SubResource( 3 )
+text = "BACK"
+flat = true
+align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

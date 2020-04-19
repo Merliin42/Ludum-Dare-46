@@ -45,7 +45,7 @@ shape = SubResource( 3 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "backward"
-frame = 2
+frame = 5
 playing = true
 
 [node name="TrapsDetector" type="Area2D" parent="."]
