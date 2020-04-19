@@ -13,7 +13,7 @@ orbit_velocity_random = 0.0
 linear_accel = -500.0
 scale = 20.0
 scale_random = 1.0
-color = Color( 0.470588, 0.0627451, 0.0627451, 1 )
+color = Color( 0.682353, 0.105882, 0.0392157, 1 )
 
 [node name="Blood" type="Particles2D"]
 emitting = false
@@ -21,6 +21,5 @@ amount = 500
 one_shot = true
 explosiveness = 0.8
 randomness = 0.5
-visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = false
 process_material = SubResource( 1 )

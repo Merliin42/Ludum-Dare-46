@@ -11,7 +11,7 @@ orbit_velocity_random = 0.0
 linear_accel = -200.0
 scale = 20.0
 scale_random = 1.0
-color = Color( 0.682353, 0, 0, 1 )
+color = Color( 0.682353, 0.105882, 0.0392157, 1 )
 
 [node name="Blood2" type="Particles2D"]
 emitting = false
