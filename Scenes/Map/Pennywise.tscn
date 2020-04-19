@@ -1,20 +1,24 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/Sounds/bone_crush.wav" type="AudioStream" id=1]
 [ext_resource path="res://Scripts/Map/Pennywise.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Particles/Blood2.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 480, 64 )
 
 [node name="Pennywise" type="Area2D"]
-rotation = 0.785398
 collision_layer = 8
 collision_mask = 32
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 0.698132
 shape = SubResource( 1 )
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 1 )
+
+[node name="Blood2" parent="." instance=ExtResource( 3 )]
+position = Vector2( -184, -120 )
 [connection signal="body_entered" from="." to="." method="_on_Pennywise_body_entered"]
