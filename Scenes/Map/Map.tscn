@@ -77,7 +77,7 @@ position = Vector2( 7800.03, -2717.9 )
 position = Vector2( 13178.7, -5583.96 )
 
 [node name="Pennywise" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1002.07, 2461.52 )
+position = Vector2( 728, 2320 )
 
 [node name="Colision" type="StaticBody2D" parent="."]
 
