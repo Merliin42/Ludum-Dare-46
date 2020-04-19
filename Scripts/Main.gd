@@ -12,6 +12,7 @@ func game_over():
 	var minutes = int(time_played / 60)
 	var seconds = time_played % 60
 	player_vars.time_played = str(minutes) + "m" + str(seconds) + "s"
+	
 
 func _on_Character_pennywise():
 	hungry += 10*childs
