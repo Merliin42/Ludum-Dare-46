@@ -35,9 +35,9 @@ position = Vector2( 13178.7, -5583.96 )
 [node name="Pennywise" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1002.07, 2461.52 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Colision" type="StaticBody2D" parent="."]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Colision"]
 build_mode = 1
 polygon = PoolVector2Array( 18752, -6816, 19456, -6464, 1088, 2720, 384, 2368 )
 

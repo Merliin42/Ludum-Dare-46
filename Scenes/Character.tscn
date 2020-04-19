@@ -11,6 +11,7 @@ extents = Vector2( 72, 71.9999 )
 
 [node name="Character" type="KinematicBody2D"]
 position = Vector2( 104, 1000 )
+collision_layer = 32
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -30,7 +31,7 @@ collision_mask = 2
 shape = SubResource( 2 )
 
 [node name="ChildDetector" type="Area2D" parent="."]
-collision_layer = 4
+collision_layer = 32
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChildDetector"]
