@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/ChildSpawner.gd" type="Script" id=1]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 1896, 1696, 0, 0, 0, 0, 2384, 1960, 0, 0, 0, 0, 15542.2, -4650.69, 0, 0, 0, 0, 15405.2, -4863.38, 0, 0, 0, 0, 15675.6, -4715.58, 0, 0, 0, 0, 18920, -6328, 0, 0, 0, 0, 18584, -6608, 0, 0, 0, 0, 15625.1, -5148.18, 0, 0, 0, 0, 15700.8, -4895.83, 0, 0, 0, 0, 15437.6, -5058.06, 0, 0, 0, 0, 10851, -2727.93, 0, 0, 0, 0, 10935.3, -2475.05, 0, 0, 0, 0, 10568, -2601.49, 0, 0, 0, 0, 1896, 1696 )
+}
+
+[node name="ChildSpawner" type="Path2D"]
+position = Vector2( -38.9072, 15.5627 )
+curve = SubResource( 1 )
+script = ExtResource( 1 )
+
+[node name="Position" type="PathFollow2D" parent="."]
+position = Vector2( 1896, 1696 )
+rotation = 2.65934
+rotate = false
+
+[node name="ChildSpawn" type="Timer" parent="."]
+autostart = true
+[connection signal="timeout" from="ChildSpawn" to="." method="_on_ChildSpawn_timeout"]

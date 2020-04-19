@@ -1,16 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Map/Map.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Character.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=5]
 [ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=6]
 
-[sub_resource type="Curve2D" id=1]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 1896, 1696, 0, 0, 0, 0, 2384, 1960, 0, 0, 0, 0, 15542.2, -4650.69, 0, 0, 0, 0, 15405.2, -4863.38, 0, 0, 0, 0, 15675.6, -4715.58, 0, 0, 0, 0, 18920, -6328, 0, 0, 0, 0, 18584, -6608, 0, 0, 0, 0, 15625.1, -5148.18, 0, 0, 0, 0, 15700.8, -4895.83, 0, 0, 0, 0, 15437.6, -5058.06, 0, 0, 0, 0, 10851, -2727.93, 0, 0, 0, 0, 10935.3, -2475.05, 0, 0, 0, 0, 10568, -2601.49, 0, 0, 0, 0, 1896, 1696 )
-}
-
-[node name="Node2D" type="Node"]
+[node name="Main" type="Node"]
 script = ExtResource( 5 )
 
 [node name="Map" parent="." instance=ExtResource( 1 )]
@@ -19,26 +14,14 @@ script = ExtResource( 5 )
 position = Vector2( 1226.75, 2319.15 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="ChildPath" type="Path2D" parent="."]
-position = Vector2( -38.9072, 15.5627 )
-curve = SubResource( 1 )
-
-[node name="ChildSpawner" type="PathFollow2D" parent="ChildPath"]
-position = Vector2( 1896, 1696 )
-rotation = 2.65934
-rotate = false
-
 [node name="GUI" parent="." instance=ExtResource( 6 )]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="TestCam" type="Camera2D" parent="."]
 position = Vector2( 10232, -2232 )
+current = true
 zoom = Vector2( 10, 10 )
 
 [node name="PennywiseHunger" type="Timer" parent="."]
 autostart = true
-
-[node name="ChildSpawn" type="Timer" parent="."]
-autostart = true
 [connection signal="pennywise" from="Character" to="." method="_on_Character_pennywise"]
 [connection signal="timeout" from="PennywiseHunger" to="." method="_on_PennywiseHunger_timeout"]
-[connection signal="timeout" from="ChildSpawn" to="." method="_on_ChildSpawn_timeout"]
