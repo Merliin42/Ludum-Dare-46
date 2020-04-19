@@ -31,14 +31,14 @@ extents = Vector2( 56, 24 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 10 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "backward",
-"speed": 25.0
-}, {
 "frames": [ ExtResource( 9 ), ExtResource( 13 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "forward",
+"speed": 25.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "backward",
 "speed": 25.0
 }, {
 "frames": [ ExtResource( 19 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 18 ) ],
@@ -67,7 +67,7 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "forward_right"
-frame = 4
+frame = 3
 playing = true
 
 [node name="TrapsDetector" type="Area2D" parent="."]
@@ -91,6 +91,13 @@ collision_mask = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PennywiseDetector"]
 shape = SubResource( 3 )
 
+[node name="GoBackDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoBackDetector"]
+shape = SubResource( 3 )
+
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 
@@ -103,4 +110,5 @@ one_shot = true
 [connection signal="area_entered" from="ChildDetector" to="." method="_on_ChildDetector_area_entered"]
 [connection signal="area_entered" from="PennywiseDetector" to="." method="_on_PennywiseDetector_area_entered"]
 [connection signal="area_exited" from="PennywiseDetector" to="." method="_on_PennywiseDetector_area_exited"]
+[connection signal="area_entered" from="GoBackDetector" to="." method="_on_GoBackDetector_area_entered"]
 [connection signal="timeout" from="Animation" to="." method="_on_Animation_timeout"]

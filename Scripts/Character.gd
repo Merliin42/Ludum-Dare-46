@@ -76,3 +76,6 @@ func _on_Animation_timeout():
 	var start_color = Color(1.0, 1.0, 1.0, 0.0)
 	$Tween.interpolate_property(self, "modulate", start_color, end_color, 0.5, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	$Tween.start()
+
+func _on_GoBackDetector_area_entered(area):
+	direction = -1
