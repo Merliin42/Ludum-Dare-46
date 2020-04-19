@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/cappy.wav-f095585a52a93bfe3c75433f383e840f.sample"
+
+[deps]
+
+source_file="res://Assets/Music/cappy.wav"
+dest_files=[ "res://.import/cappy.wav-f095585a52a93bfe3c75433f383e840f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=false
+edit/loop=false
+compress/mode=0

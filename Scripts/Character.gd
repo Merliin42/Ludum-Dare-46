@@ -7,6 +7,7 @@ var childs = 0
 
 signal pennywise
 
+# warning-ignore:unused_argument
 func _process(delta):
 	var displacement = Vector2(3, -1.5)
 	if Input.is_action_pressed("ui_left"):
@@ -25,9 +26,11 @@ func _process(delta):
 		return_possible = false
 	
 	displacement *= direction
+# warning-ignore:return_value_discarded
 	move_and_slide(displacement)
 
 
+# warning-ignore:unused_argument
 func _on_TrapsDetector_area_entered(area):
 	var start_color = Color(1.0, 1.0, 1.0, 1.0)
 	var end_color = Color(1.0, 1.0, 1.0, 0.0)
@@ -37,16 +40,19 @@ func _on_TrapsDetector_area_entered(area):
 	childs = 0
 
 
+# warning-ignore:unused_argument
 func _on_ChildDetector_area_entered(area):
 	print("Give me the child")
 	childs += 1
 
 
+# warning-ignore:unused_argument
 func _on_PennywiseDetector_area_entered(area):
 	print("You'll be the last one")
 	direction = 1
 	emit_signal("pennywise", childs)
 
+# warning-ignore:unused_argument
 func _on_PennywiseDetector_area_exited(area):
 	return_possible = true
 
