@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/scared_child.wav-6d3824508bbdc93a77403a2bf158a153.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/scared_child.wav"
+dest_files=[ "res://.import/scared_child.wav-6d3824508bbdc93a77403a2bf158a153.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

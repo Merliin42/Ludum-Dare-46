@@ -1,15 +1,24 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Traps/Trap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Traps/sewer.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sounds/sewer.wav" type="AudioStream" id=3]
+[ext_resource path="res://Scripts/Traps/Sewer.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 48, 24 )
 
 [node name="Sewer" instance=ExtResource( 1 )]
+collision_mask = 32
+script = ExtResource( 4 )
 
 [node name="CollisionShape2D" parent="." index="0"]
 shape = SubResource( 1 )
 
 [node name="Sprite" parent="." index="1"]
 texture = ExtResource( 2 )
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="." index="2"]
+stream = ExtResource( 3 )
+bus = "Sound effects"
+[connection signal="body_entered" from="." to="." method="_on_Sewer_body_entered"]

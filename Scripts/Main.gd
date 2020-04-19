@@ -12,3 +12,5 @@ func _on_PennywiseHunger_timeout():
 	hungry -= 1
 	$GUI/MarginContainer/TextureProgress.value = hungry
 	$PennywiseHunger.start()
+
+

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Map/TileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Map/Pennywise.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Map/CarSpawner.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Map/ChildSpawner/ChildSpawner.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Traps/Sewer.tscn" type="PackedScene" id=6]
 
 [node name="Map" type="Node2D"]
 
@@ -29,3 +30,6 @@ build_mode = 1
 polygon = PoolVector2Array( 18752, -6816, 19456, -6464, 1088, 2720, 384, 2368 )
 
 [node name="ChildSpawner" parent="." instance=ExtResource( 4 )]
+
+[node name="Sewer" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3000, 1408 )
