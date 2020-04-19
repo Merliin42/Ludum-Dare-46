@@ -76,9 +76,6 @@ position = Vector2( 7800.03, -2717.9 )
 [node name="CarSpawner3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 13178.7, -5583.96 )
 
-[node name="Pennywise" parent="." instance=ExtResource( 2 )]
-position = Vector2( 728, 2320 )
-
 [node name="Colision" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Colision"]
@@ -86,3 +83,6 @@ build_mode = 1
 polygon = PoolVector2Array( 18752, -6816, 19456, -6464, 1088, 2720, 384, 2368 )
 
 [node name="ChildSpawner" parent="." instance=ExtResource( 4 )]
+
+[node name="Pennywise" parent="." instance=ExtResource( 2 )]
+position = Vector2( 728, 2320 )

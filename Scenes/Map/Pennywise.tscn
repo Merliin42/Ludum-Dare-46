@@ -18,7 +18,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 480, 64 )
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 13 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 12 ) ],
 "loop": true,
@@ -26,8 +26,7 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="Animation" id=2]
-resource_name = "eyes"
+[sub_resource type="Animation" id=3]
 length = 3.0
 loop = true
 tracks/0/type = "value"
@@ -62,7 +61,7 @@ script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 128, 128 )
-rotation = 0.698132
+rotation = 0.462512
 shape = SubResource( 1 )
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="."]
@@ -85,10 +84,11 @@ position = Vector2( 32, 56 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 80, -168 )
-frames = SubResource( 3 )
+frames = SubResource( 2 )
 animation = "balloon"
+frame = 5
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/eyes = SubResource( 2 )
+anims/eyes = SubResource( 3 )
 [connection signal="area_entered" from="." to="." method="_on_Pennywise_area_entered"]
