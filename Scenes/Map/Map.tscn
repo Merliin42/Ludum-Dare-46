@@ -11,26 +11,6 @@
 
 [node name="TileMap" parent="." instance=ExtResource( 1 )]
 
-[node name="CarSpawner" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3548.71, -883.631 )
-
-[node name="CarSpawner2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 7800.03, -2717.9 )
-
-[node name="CarSpawner3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 13178.7, -5583.96 )
-
-[node name="Pennywise" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1002.07, 2461.52 )
-
-[node name="Colision" type="StaticBody2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Colision"]
-build_mode = 1
-polygon = PoolVector2Array( 18752, -6816, 19456, -6464, 1088, 2720, 384, 2368 )
-
-[node name="ChildSpawner" parent="." instance=ExtResource( 4 )]
-
 [node name="Traps" type="Node2D" parent="."]
 
 [node name="FireHydrant" parent="Traps" instance=ExtResource( 5 )]
@@ -86,3 +66,23 @@ position = Vector2( 15114.2, -4644.59 )
 
 [node name="Sewer8" parent="Traps" instance=ExtResource( 6 )]
 position = Vector2( 17475.3, -5615.05 )
+
+[node name="CarSpawner" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3548.71, -883.631 )
+
+[node name="CarSpawner2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7800.03, -2717.9 )
+
+[node name="CarSpawner3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 13178.7, -5583.96 )
+
+[node name="Pennywise" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1002.07, 2461.52 )
+
+[node name="Colision" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Colision"]
+build_mode = 1
+polygon = PoolVector2Array( 18752, -6816, 19456, -6464, 1088, 2720, 384, 2368 )
+
+[node name="ChildSpawner" parent="." instance=ExtResource( 4 )]
