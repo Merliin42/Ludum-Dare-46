@@ -7,7 +7,7 @@ func _on_ChildSpawn_timeout():
 	var child = Child.instance()
 	add_child(child)
 	child.position = $Position.position
-	child.direction.x += rand_range(10, -10)
-	child.direction.y += rand_range(10, -10)
+	child.direction.x += rand_range(20, -20)
+	child.direction.y += rand_range(20, -20)
 		
 	$ChildSpawn.start()

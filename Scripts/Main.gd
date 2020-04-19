@@ -2,8 +2,9 @@ extends Node
 
 var hungry = 60
 var childs = 0
-onready var player_vars = get_node("/root/PlayerVariables")
 var time_played = 0
+onready var player_vars = get_node("/root/PlayerVariables")
+
 
 func _ready():
 	randomize()
