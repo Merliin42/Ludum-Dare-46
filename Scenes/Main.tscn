@@ -29,5 +29,7 @@ autostart = true
 stream = ExtResource( 3 )
 autoplay = true
 bus = "Music"
+[connection signal="child" from="Character" to="." method="_on_Character_child"]
+[connection signal="hit" from="Character" to="." method="_on_Character_hit"]
 [connection signal="pennywise" from="Character" to="." method="_on_Character_pennywise"]
 [connection signal="timeout" from="PennywiseHunger" to="." method="_on_PennywiseHunger_timeout"]

@@ -3,9 +3,10 @@ extends KinematicBody2D
 var speed = 3
 var direction = 1
 var return_possible = true
-var childs = 0
 
 signal pennywise
+signal child
+signal hit
 
 # warning-ignore:unused_argument
 func _process(delta):
@@ -48,20 +49,16 @@ func _on_TrapsDetector_area_entered(area):
 	$Animation.start()
 	$Tween.interpolate_property(self, "modulate", start_color, end_color, 0.5, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	$Tween.start()
-	childs = 0
-
+	emit_signal("hit")
 
 # warning-ignore:unused_argument
 func _on_ChildDetector_area_entered(area):
-	print("Give me the child")
-	childs += 1
-
+	emit_signal("child")
 
 # warning-ignore:unused_argument
 func _on_PennywiseDetector_area_entered(area):
-	print("You'll be the last one")
 	direction = 1
-	emit_signal("pennywise", childs)
+	emit_signal("pennywise")
 
 # warning-ignore:unused_argument
 func _on_PennywiseDetector_area_exited(area):

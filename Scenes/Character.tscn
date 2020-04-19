@@ -16,14 +16,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 11 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "backward",
-"speed": 24.0
-}, {
 "frames": [ ExtResource( 10 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 3 ), ExtResource( 1 ) ],
 "loop": true,
 "name": "forward",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 11 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "backward",
 "speed": 24.0
 } ]
 
@@ -44,28 +44,28 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "forward"
-frame = 5
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
 
 [node name="TrapsDetector" type="Area2D" parent="."]
-collision_layer = 2
+collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TrapsDetector"]
 shape = SubResource( 3 )
 
 [node name="ChildDetector" type="Area2D" parent="."]
-collision_layer = 32
+collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChildDetector"]
 shape = SubResource( 3 )
 
 [node name="PennywiseDetector" type="Area2D" parent="."]
-collision_layer = 8
+collision_layer = 0
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PennywiseDetector"]
