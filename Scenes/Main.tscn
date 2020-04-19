@@ -13,7 +13,7 @@ script = ExtResource( 5 )
 position = Vector2( 37, 21 )
 
 [node name="Character" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1226.75, 2319.15 )
+position = Vector2( 1324.15, 2243.85 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="GUI" parent="." instance=ExtResource( 6 )]
