@@ -9,7 +9,14 @@ signal pennywise
 
 # warning-ignore:unused_argument
 func _process(delta):
+	
+	if Input.is_action_just_pressed("ui_accept") and return_possible:
+		direction = -direction
+		return_possible = false
+		
 	var displacement = Vector2(3, -1.5)
+	displacement *= direction
+	
 	if Input.is_action_pressed("ui_left"):
 		displacement.y -= 1.5
 	elif Input.is_action_pressed("ui_right"):
@@ -21,11 +28,11 @@ func _process(delta):
 		displacement.x -= Input.get_action_strength("speed_down")*100
 		displacement.y += Input.get_action_strength("speed_down")*50
 	
-	if Input.is_action_just_pressed("ui_accept") and return_possible:
-		direction = -direction
-		return_possible = false
-	
-	displacement *= direction
+	if direction == 1 :
+		$AnimatedSprite.animation = "forward"
+	elif direction == -1 :
+		$AnimatedSprite.animation = "backward"
+
 # warning-ignore:return_value_discarded
 	move_and_slide(displacement)
 
