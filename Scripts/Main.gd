@@ -11,8 +11,8 @@ func _ready():
 func game_over():
 	var minutes = int(time_played / 60)
 	var seconds = time_played % 60
-	player_vars.time_played = str(minutes) + "m" + str(seconds) + "s"
-	
+	player_vars.time_played = str(minutes) + " MIN AND " + str(seconds) + " SEC"
+	get_tree().change_scene("res://Scenes/Menus/GameOver.tscn")
 
 func _on_Character_pennywise():
 	hungry += 10*childs

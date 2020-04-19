@@ -1,0 +1,158 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Menus/start_screen.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Font/GOODBYE.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scripts/Menus/GameOver.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 200
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 100
+font_data = ExtResource( 2 )
+
+[sub_resource type="InputEventAction" id=4]
+action = "ui_cancel"
+
+[sub_resource type="ShortCut" id=5]
+shortcut = SubResource( 4 )
+
+[node name="GameOver" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 200
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
+margin_left = 10.0
+margin_top = 200.0
+margin_right = 1910.0
+margin_bottom = 1070.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer2"]
+margin_right = 1900.0
+margin_bottom = 172.0
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer2/HBoxContainer"]
+margin_left = 575.0
+margin_right = 1325.0
+margin_bottom = 172.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "GAME OVER"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer2"]
+margin_top = 176.0
+margin_right = 1900.0
+margin_bottom = 313.0
+custom_constants/margin_top = 50
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer2/MarginContainer"]
+margin_top = 50.0
+margin_right = 1900.0
+margin_bottom = 137.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "IT SURVIVED "
+align = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer2"]
+margin_top = 317.0
+margin_right = 1900.0
+margin_bottom = 870.0
+size_flags_vertical = 3
+custom_constants/separation = 50
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Restart" type="Button" parent="MarginContainer/VBoxContainer2/VBoxContainer"]
+margin_left = 788.0
+margin_top = 87.0
+margin_right = 1111.0
+margin_bottom = 180.0
+focus_mode = 0
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_disabled = Color( 0.207843, 0.207843, 0.207843, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.682353, 0.105882, 0.0392157, 1 )
+custom_colors/font_color_pressed = Color( 0.682353, 0.105882, 0.0392157, 1 )
+enabled_focus_mode = 0
+text = "RESTART"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Button" parent="MarginContainer/VBoxContainer2/VBoxContainer"]
+margin_left = 852.0
+margin_top = 230.0
+margin_right = 1048.0
+margin_bottom = 323.0
+focus_mode = 0
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_disabled = Color( 0.207843, 0.207843, 0.207843, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.682353, 0.105882, 0.0392157, 1 )
+custom_colors/font_color_pressed = Color( 0.682353, 0.105882, 0.0392157, 1 )
+enabled_focus_mode = 0
+text = "MENU"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer2/VBoxContainer"]
+margin_left = 855.0
+margin_top = 373.0
+margin_right = 1045.0
+margin_bottom = 466.0
+focus_mode = 0
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_disabled = Color( 0.207843, 0.207843, 0.207843, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.682353, 0.105882, 0.0392157, 1 )
+custom_colors/font_color_pressed = Color( 0.682353, 0.105882, 0.0392157, 1 )
+enabled_focus_mode = 0
+shortcut = SubResource( 5 )
+text = "QUIT"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/VBoxContainer/Restart" to="." method="_on_Restart_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/VBoxContainer/Menu" to="." method="_on_Menu_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
