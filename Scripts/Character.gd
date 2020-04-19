@@ -29,7 +29,11 @@ func _process(delta):
 
 
 func _on_TrapsDetector_area_entered(area):
-	print("hit!")
+	var start_color = Color(1.0, 1.0, 1.0, 1.0)
+	var end_color = Color(1.0, 1.0, 1.0, 0.0)
+	$Animation.start()
+	$Tween.interpolate_property(self, "modulate", start_color, end_color, 0.5, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
+	$Tween.start()
 	childs = 0
 
 
@@ -45,3 +49,9 @@ func _on_PennywiseDetector_area_entered(area):
 
 func _on_PennywiseDetector_area_exited(area):
 	return_possible = true
+
+func _on_Animation_timeout():
+	var end_color = Color(1.0, 1.0, 1.0, 1.0)
+	var start_color = Color(1.0, 1.0, 1.0, 0.0)
+	$Tween.interpolate_property(self, "modulate", start_color, end_color, 0.5, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
+	$Tween.start()
