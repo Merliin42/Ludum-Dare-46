@@ -1,12 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/HungerBar/under.png" type="Texture" id=1]
 [ext_resource path="res://Assets/HungerBar/over.png" type="Texture" id=2]
 [ext_resource path="res://Assets/HungerBar/progress.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Font/GOODBYE.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 4 )
 
 [node name="GUI" type="CanvasLayer"]
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="HungryBar" type="MarginContainer" parent="."]
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -19,7 +24,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureProgress" type="TextureProgress" parent="MarginContainer"]
+[node name="TextureProgress" type="TextureProgress" parent="HungryBar"]
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 1910.0
@@ -34,3 +39,23 @@ stretch_margin_left = 20
 stretch_margin_top = 20
 stretch_margin_right = 20
 stretch_margin_bottom = 20
+
+[node name="ChildCounter" type="MarginContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ChildCounter"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 102.0
+margin_bottom = 97.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.682353, 0.105882, 0.0392157, 1 )
+text = "00"
