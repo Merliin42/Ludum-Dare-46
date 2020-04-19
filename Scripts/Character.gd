@@ -18,15 +18,19 @@ func _process(delta):
 	displacement *= direction
 	
 	if Input.is_action_pressed("ui_left"):
-		displacement.y -= 1.5
+		displacement.y -= Input.get_action_strength("ui_left")*2
 	elif Input.is_action_pressed("ui_right"):
-		displacement.y += 1.5
+		displacement.y += Input.get_action_strength("ui_right")*2
 	
 	displacement = displacement.normalized()*300
 	
 	if Input.is_action_pressed("speed_down"):
 		displacement.x -= Input.get_action_strength("speed_down")*100
 		displacement.y += Input.get_action_strength("speed_down")*50
+	
+	if Input.is_action_pressed("speed_up"):
+		displacement.x += Input.get_action_strength("speed_up")*100
+		displacement.y -= Input.get_action_strength("speed_up")*50
 	
 	if direction == 1 :
 		$AnimatedSprite.animation = "forward"
