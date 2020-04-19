@@ -1,3 +1,3 @@
 extends Node
 
-var time_played = 0
+var time_played = ""

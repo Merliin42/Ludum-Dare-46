@@ -43,9 +43,8 @@ position = Vector2( 8, 48 )
 shape = SubResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 1 )
-animation = "backward"
-frame = 5
+frames = SubResource( 2 )
+animation = "forward_right"
 playing = true
 
 [node name="TrapsDetector" type="Area2D" parent="."]
