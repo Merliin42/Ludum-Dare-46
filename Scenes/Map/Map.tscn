@@ -36,5 +36,53 @@ polygon = PoolVector2Array( 18752, -6816, 19456, -6464, 1088, 2720, 384, 2368 )
 [node name="FireHydrant" parent="Traps" instance=ExtResource( 5 )]
 position = Vector2( 2032, 1664 )
 
+[node name="FireHydrant2" parent="Traps" instance=ExtResource( 5 )]
+position = Vector2( 3418.22, 987.894 )
+
+[node name="FireHydrant3" parent="Traps" instance=ExtResource( 5 )]
+position = Vector2( 5145, 124.506 )
+
+[node name="FireHydrant4" parent="Traps" instance=ExtResource( 5 )]
+position = Vector2( 7694.5, -1152.64 )
+
+[node name="FireHydrant5" parent="Traps" instance=ExtResource( 5 )]
+position = Vector2( 10602.8, -2621.11 )
+
+[node name="FireHydrant6" parent="Traps" instance=ExtResource( 5 )]
+position = Vector2( 14168.7, -4393.33 )
+
+[node name="FireHydrant7" parent="Traps" instance=ExtResource( 5 )]
+position = Vector2( 16077.3, -5349.99 )
+
+[node name="FireHydrant8" parent="Traps" instance=ExtResource( 5 )]
+position = Vector2( 15618.1, -4151.77 )
+
+[node name="FireHydrant9" parent="Traps" instance=ExtResource( 5 )]
+position = Vector2( 14137.6, -4902.75 )
+
+[node name="FireHydrant10" parent="Traps" instance=ExtResource( 5 )]
+position = Vector2( 17622.3, -6115.32 )
+
 [node name="Sewer" parent="Traps" instance=ExtResource( 6 )]
-position = Vector2( 1976, 2168 )
+position = Vector2( 1921.5, 2069.55 )
+
+[node name="Sewer2" parent="Traps" instance=ExtResource( 6 )]
+position = Vector2( 5573.05, 126.861 )
+
+[node name="Sewer3" parent="Traps" instance=ExtResource( 6 )]
+position = Vector2( 7357.5, -550.002 )
+
+[node name="Sewer4" parent="Traps" instance=ExtResource( 6 )]
+position = Vector2( 8444, -1513.43 )
+
+[node name="Sewer5" parent="Traps" instance=ExtResource( 6 )]
+position = Vector2( 9541.05, -1858.02 )
+
+[node name="Sewer6" parent="Traps" instance=ExtResource( 6 )]
+position = Vector2( 12549.1, -3148.45 )
+
+[node name="Sewer7" parent="Traps" instance=ExtResource( 6 )]
+position = Vector2( 15114.2, -4644.59 )
+
+[node name="Sewer8" parent="Traps" instance=ExtResource( 6 )]
+position = Vector2( 17475.3, -5615.05 )
