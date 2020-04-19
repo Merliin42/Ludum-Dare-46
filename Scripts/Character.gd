@@ -10,7 +10,7 @@ signal hit
 
 # warning-ignore:unused_argument
 func _process(delta):
-	
+	var lr = ""
 	if Input.is_action_just_pressed("ui_accept") and return_possible:
 		direction = -direction
 		return_possible = false
@@ -20,8 +20,10 @@ func _process(delta):
 	
 	if Input.is_action_pressed("ui_left"):
 		displacement.y -= Input.get_action_strength("ui_left")*2
+		lr = "left"
 	elif Input.is_action_pressed("ui_right"):
 		displacement.y += Input.get_action_strength("ui_right")*2
+		lr = "right"
 	
 	displacement = displacement.normalized()*300
 	
@@ -34,7 +36,12 @@ func _process(delta):
 		displacement.y -= Input.get_action_strength("speed_up")*50
 	
 	if direction == 1 :
-		$AnimatedSprite.animation = "forward"
+		if lr == "left" :
+			$AnimatedSprite.animation = "forward_left"
+		elif lr == "right" :
+			$AnimatedSprite.animation = "forward_right"
+		else:
+			$AnimatedSprite.animation = "forward"
 	elif direction == -1 :
 		$AnimatedSprite.animation = "backward"
 
