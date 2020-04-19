@@ -4,7 +4,7 @@
 [ext_resource path="res://Assets/Traps/fire_hydrant.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 56, 24 )
+extents = Vector2( 35.6124, 18.4832 )
 
 [node name="FireHydrant" instance=ExtResource( 1 )]
 
@@ -12,6 +12,7 @@ extents = Vector2( 56, 24 )
 shape = SubResource( 1 )
 
 [node name="Sprite" parent="." index="1"]
+position = Vector2( 6.83203, 12.3798 )
 texture = ExtResource( 2 )
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="." index="2"]

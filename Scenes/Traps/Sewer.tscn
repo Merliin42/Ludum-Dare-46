@@ -6,7 +6,7 @@
 [ext_resource path="res://Scripts/Traps/Sewer.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 48, 24 )
+extents = Vector2( 24.7719, 13.7807 )
 
 [node name="Sewer" instance=ExtResource( 1 )]
 collision_mask = 32
@@ -16,6 +16,7 @@ script = ExtResource( 4 )
 shape = SubResource( 1 )
 
 [node name="Sprite" parent="." index="1"]
+position = Vector2( 4.16086, -30.6131 )
 texture = ExtResource( 2 )
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="." index="2"]
