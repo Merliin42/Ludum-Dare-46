@@ -4,15 +4,15 @@
 [ext_resource path="res://Assets/Font/GOODBYE.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scripts/Menus/StartScreen.gd" type="Script" id=3]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 200
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 300
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=3]
 size = 100
 font_data = ExtResource( 2 )
 
@@ -67,7 +67,7 @@ margin_left = 506.0
 margin_top = 43.0
 margin_right = 853.0
 margin_bottom = 215.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "KEEP"
 
@@ -75,7 +75,7 @@ text = "KEEP"
 margin_left = 857.0
 margin_right = 1111.0
 margin_bottom = 259.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.682353, 0.105882, 0.0392157, 1 )
 text = "IT"
 
@@ -84,7 +84,7 @@ margin_left = 1115.0
 margin_top = 43.0
 margin_right = 1393.0
 margin_bottom = 215.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "FED"
 
@@ -106,7 +106,7 @@ margin_right = 1068.0
 margin_bottom = 207.0
 focus_mode = 0
 size_flags_horizontal = 4
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_disabled = Color( 0.207843, 0.207843, 0.207843, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0.682353, 0.105882, 0.0392157, 1 )
@@ -125,7 +125,7 @@ margin_right = 1061.0
 margin_bottom = 350.0
 focus_mode = 0
 size_flags_horizontal = 4
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_disabled = Color( 0.207843, 0.207843, 0.207843, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0.682353, 0.105882, 0.0392157, 1 )
@@ -144,7 +144,7 @@ margin_right = 1206.0
 margin_bottom = 493.0
 focus_mode = 0
 size_flags_horizontal = 4
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_disabled = Color( 0.207843, 0.207843, 0.207843, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0.682353, 0.105882, 0.0392157, 1 )
