@@ -39,6 +39,7 @@ modulate = Color( 0, 0, 0, 1 )
 script = ExtResource( 5 )
 
 [node name="Background" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 1060, 600 )
 scale = Vector2( 2.14583, 2.35185 )
 texture = ExtResource( 4 )
@@ -56,7 +57,7 @@ position = Vector2( 1050, 1140 )
 texture = ExtResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 1050, 1140 )
+position = Vector2( 40, -40 )
 current = true
 zoom = Vector2( 1.05, 1.05 )
 

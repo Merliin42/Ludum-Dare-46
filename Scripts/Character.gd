@@ -60,7 +60,6 @@ func _on_TrapsDetector_area_entered(area):
 
 # warning-ignore:unused_argument
 func _on_ChildDetector_area_entered(area):
-	print("child !")
 	emit_signal("child")
 
 # warning-ignore:unused_argument
