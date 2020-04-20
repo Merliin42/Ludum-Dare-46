@@ -31,9 +31,11 @@ func _on_PennywiseHunger_timeout():
 
 func _on_Character_child():
 	childs += 1
+	print(childs)
 	$GUI/ChildCounter/Label.text = str(childs)
 
 
 func _on_Character_hit():
 	childs = 0
+	print(childs)
 	$GUI/ChildCounter/Label.text = str(childs)
