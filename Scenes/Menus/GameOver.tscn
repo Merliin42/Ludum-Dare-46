@@ -4,7 +4,6 @@
 [ext_resource path="res://Assets/Font/GOODBYE.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scripts/Menus/GameOver.gd" type="Script" id=3]
 
-
 [sub_resource type="DynamicFont" id=1]
 size = 200
 font_data = ExtResource( 2 )
