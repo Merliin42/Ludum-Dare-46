@@ -19,7 +19,7 @@ scale = Vector2( 0.5, 0.5 )
 [node name="GUI" parent="." instance=ExtResource( 6 )]
 
 [node name="TestCam" type="Camera2D" parent="."]
-position = Vector2( 1083.26, 2422.62 )
+position = Vector2( 10750.2, -2670.75 )
 zoom = Vector2( 10, 10 )
 
 [node name="PennywiseHunger" type="Timer" parent="."]
