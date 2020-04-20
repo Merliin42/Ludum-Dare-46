@@ -23,7 +23,7 @@ action = "ui_accept"
 shortcut = SubResource( 4 )
 
 [sub_resource type="InputEventAction" id=6]
-action = "iu_select"
+action = "ui_select"
 
 [sub_resource type="ShortCut" id=7]
 shortcut = SubResource( 6 )
@@ -67,7 +67,7 @@ __meta__ = {
 margin_left = 10.0
 margin_top = 200.0
 margin_right = 1910.0
-margin_bottom = 1426.0
+margin_bottom = 1070.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer2"]
 margin_right = 1900.0
@@ -103,7 +103,7 @@ text = "FED"
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer2"]
 margin_top = 263.0
 margin_right = 1900.0
-margin_bottom = 1226.0
+margin_bottom = 870.0
 size_flags_vertical = 3
 custom_constants/separation = 50
 alignment = 1
@@ -113,9 +113,9 @@ __meta__ = {
 
 [node name="Start" type="Button" parent="MarginContainer/VBoxContainer2/VBoxContainer"]
 margin_left = 831.0
-margin_top = 292.0
+margin_top = 114.0
 margin_right = 1068.0
-margin_bottom = 385.0
+margin_bottom = 207.0
 focus_mode = 0
 size_flags_horizontal = 4
 custom_fonts/font = SubResource( 3 )
@@ -134,9 +134,9 @@ __meta__ = {
 
 [node name="Intro" type="Button" parent="MarginContainer/VBoxContainer2/VBoxContainer"]
 margin_left = 839.0
-margin_top = 435.0
+margin_top = 257.0
 margin_right = 1061.0
-margin_bottom = 528.0
+margin_bottom = 350.0
 focus_mode = 0
 size_flags_horizontal = 4
 custom_fonts/font = SubResource( 3 )
@@ -154,9 +154,9 @@ __meta__ = {
 
 [node name="Instructions" type="Button" parent="MarginContainer/VBoxContainer2/VBoxContainer"]
 margin_left = 693.0
-margin_top = 578.0
+margin_top = 400.0
 margin_right = 1206.0
-margin_bottom = 671.0
+margin_bottom = 493.0
 focus_mode = 0
 size_flags_horizontal = 4
 custom_fonts/font = SubResource( 3 )
