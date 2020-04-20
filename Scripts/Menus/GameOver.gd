@@ -4,7 +4,7 @@ onready var music = get_node("/root/MenuMusic")
 onready var player_vars = get_node("/root/PlayerVariables")
 
 func _ready():
-	$MarginContainer/VBoxContainer2/MarginContainer/Label.text += player_vars.time_played
+	$MarginContainer/VBoxContainer2/MarginContainer/HBoxContainer/Label2.text += player_vars.time_played
 	music.play()
 	player_vars.is_playing = true
 

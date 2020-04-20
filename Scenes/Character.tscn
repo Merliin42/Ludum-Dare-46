@@ -26,7 +26,7 @@
 [ext_resource path="res://Assets/Character/forward_left/pers-g3.png" type="Texture" id=24]
 [ext_resource path="res://Assets/Character/forward_left/pers-g6.png" type="Texture" id=25]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 9 ), ExtResource( 13 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 8 ) ],
 "loop": true,
@@ -38,21 +38,21 @@ animations = [ {
 "name": "backward",
 "speed": 25.0
 }, {
-"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 17 ), ExtResource( 14 ), ExtResource( 25 ) ],
-"loop": true,
-"name": "forward_left",
-"speed": 25.0
-}, {
 "frames": [ ExtResource( 19 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "forward_right",
 "speed": 25.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 17 ), ExtResource( 14 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "forward_left",
+"speed": 25.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 64, 24 )
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 60.8251, 24 )
 
 [node name="Character" type="KinematicBody2D"]
@@ -65,7 +65,7 @@ current = true
 zoom = Vector2( 0.9, 0.9 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "forward"
 frame = 2
 playing = true
@@ -80,7 +80,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TrapsDetector"]
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="ChildDetector" type="Area2D" parent="."]
 position = Vector2( 0, 56 )
@@ -92,7 +92,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChildDetector"]
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="PennywiseDetector" type="Area2D" parent="."]
 position = Vector2( 0, 56 )
@@ -104,7 +104,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PennywiseDetector"]
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="GoBackDetector" type="Area2D" parent="."]
 position = Vector2( 0, 56 )
@@ -116,7 +116,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GoBackDetector"]
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="Tween" type="Tween" parent="."]
 
@@ -127,7 +127,7 @@ one_shot = true
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 56 )
 rotation = -0.462512
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 [connection signal="area_entered" from="TrapsDetector" to="." method="_on_TrapsDetector_area_entered"]
 [connection signal="area_entered" from="ChildDetector" to="." method="_on_ChildDetector_area_entered"]
 [connection signal="area_entered" from="PennywiseDetector" to="." method="_on_PennywiseDetector_area_entered"]
