@@ -86,7 +86,7 @@ position = Vector2( 32, 56 )
 position = Vector2( 80, -168 )
 frames = SubResource( 2 )
 animation = "balloon"
-frame = 5
+frame = 4
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

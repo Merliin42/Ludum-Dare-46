@@ -9,6 +9,7 @@ func _ready():
 	player_vars.is_playing = true
 
 func _on_Restart_pressed():
+	music.stop()
 	get_tree().change_scene("res://Scenes/Main.tscn")
 
 
