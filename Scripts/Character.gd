@@ -43,7 +43,12 @@ func _process(delta):
 		else:
 			$AnimatedSprite.animation = "forward"
 	elif direction == -1 :
-		$AnimatedSprite.animation = "backward"
+		if lr == "left" :
+			$AnimatedSprite.animation = "backward_left"
+		elif lr == "right" :
+			$AnimatedSprite.animation = "backward_right"
+		else:
+			$AnimatedSprite.animation = "backward"
 
 # warning-ignore:return_value_discarded
 	move_and_slide(displacement)
