@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/logo.png-cca8726399059c8d4f806e28e356b14d.stex"
+path="res://.import/pennywise head shadow detailed empty.png-0c6d8a29fe553f2767e2b76e043ecccc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://logo.png"
-dest_files=[ "res://.import/logo.png-cca8726399059c8d4f806e28e356b14d.stex" ]
+source_file="res://Assets/Menus/pennywise head shadow detailed empty.png"
+dest_files=[ "res://.import/pennywise head shadow detailed empty.png-0c6d8a29fe553f2767e2b76e043ecccc.stex" ]
 
 [params]
 

@@ -7,6 +7,7 @@ func _process(delta):
 	position.y += direction.y*delta
 
 func dead():
+	$Sound.play()
 	$AnimatedSprite.visible = false
 	$Blood.emitting = true
 	$Timer.start()
