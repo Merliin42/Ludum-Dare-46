@@ -6,6 +6,12 @@ func _process(delta):
 	position.x += direction.x*delta
 	position.y += direction.y*delta
 
+func _ready():
+	var end_color = Color(1.0, 1.0, 1.0, 1.0)
+	var start_color = Color(1.0, 1.0, 1.0, 0.0)
+	$Tween.interpolate_property(self, "modulate", start_color, end_color, 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN)
+	$Tween.start()
+
 func dead():
 	$Sound.play()
 	$AnimatedSprite.visible = false
@@ -17,6 +23,7 @@ func fade_out():
 	var end_color = Color(1.0, 1.0, 1.0, 0.0)
 	$Tween.interpolate_property(self, "modulate", start_color, end_color, 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN)
 	$Tween.start()
+	$Timer.start()
 
 
 func _on_Timer_timeout():
@@ -33,7 +40,3 @@ func _on_Collisions_body_entered(body):
 
 func _on_Death_body_entered(body):
 	dead()
-
-
-func _on_Tween_tween_completed(object, key):
-	queue_free()
